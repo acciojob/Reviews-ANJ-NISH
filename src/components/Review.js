@@ -54,12 +54,13 @@ export const Review = () => {
         <span style={{margin: '10px'}} className='job'>{job}</span>
         <p style={{margin: '10px'}} className='info'>{text}</p>
         <img style={{height: '200px', width: '200px'}} className='person-img' src={image}/>
-        </div>
         <button className="prev-btn" onClick={()=> {if(currreview===0){setCurrReview(3)} else{setCurrReview(currreview-1)}}}>Prev review</button>
         <button className="next-btn" onClick={()=> {if(currreview===3){setCurrReview(0)} else{setCurrReview(currreview+1)}}}>Next Review</button>
         <button className="random-btn" onClick={()=> {let k=currreview; while(k===currreview){
             k=Math.floor(Math.random()*4)
         } setCurrReview(k)}}>surprise me</button>
+        </div>
+        
         </>
   )
 }
